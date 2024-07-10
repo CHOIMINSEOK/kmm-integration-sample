@@ -1,0 +1,36 @@
+digraph "G" {
+node ["fontname"="Times New Roman"]
+"Simpleloginshared" ["shape"="rectangle","label"="shared"]
+"orgjetbrainskotlinkotlinstdlib" ["shape"="rectangle","label"="kotlin-stdlib"]
+"orgjetbrainsannotations" ["shape"="rectangle","label"="jetbrains-annotations"]
+"orgjetbrainscomposeruntimeruntime" ["shape"="rectangle","label"="runtime"]
+"androidxcomposeruntimeruntime" ["shape"="rectangle","label"="runtime"]
+"androidxcomposeruntimeruntimeandroid" ["shape"="rectangle","label"="runtime-android"]
+"orgjetbrainskotlinxkotlinxcoroutinescore" ["shape"="rectangle","label"="kotlinx-coroutines-core"]
+"orgjetbrainskotlinxkotlinxcoroutinescorejvm" ["shape"="rectangle","label"="kotlinx-coroutines-core-jvm"]
+"orgjetbrainskotlinxkotlinxcoroutinesbom" ["shape"="rectangle","label"="kotlinx-coroutines-bom"]
+"orgjetbrainskotlinkotlinstdlibjdk8" ["shape"="rectangle","label"="kotlin-stdlib-jdk8"]
+"orgjetbrainskotlinkotlinstdlibjdk7" ["shape"="rectangle","label"="kotlin-stdlib-jdk7"]
+"orgjetbrainskotlinxkotlinxcoroutinesandroid" ["shape"="rectangle","label"="kotlinx-coroutines-android"]
+{
+graph ["rank"="same"]
+"Simpleloginshared"
+}
+"Simpleloginshared" -> "orgjetbrainskotlinkotlinstdlib"
+"Simpleloginshared" -> "orgjetbrainscomposeruntimeruntime"
+"orgjetbrainskotlinkotlinstdlib" -> "orgjetbrainsannotations"
+"orgjetbrainscomposeruntimeruntime" -> "androidxcomposeruntimeruntime"
+"androidxcomposeruntimeruntime" -> "androidxcomposeruntimeruntimeandroid"
+"androidxcomposeruntimeruntimeandroid" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"androidxcomposeruntimeruntimeandroid" -> "orgjetbrainskotlinxkotlinxcoroutinesandroid"
+"orgjetbrainskotlinxkotlinxcoroutinescore" -> "orgjetbrainskotlinxkotlinxcoroutinescorejvm"
+"orgjetbrainskotlinxkotlinxcoroutinescorejvm" -> "orgjetbrainskotlinxkotlinxcoroutinesbom"
+"orgjetbrainskotlinxkotlinxcoroutinescorejvm" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+"orgjetbrainskotlinxkotlinxcoroutinescorejvm" -> "orgjetbrainsannotations"
+"orgjetbrainskotlinkotlinstdlibjdk8" -> "orgjetbrainskotlinkotlinstdlibjdk7"
+"orgjetbrainskotlinkotlinstdlibjdk8" -> "orgjetbrainskotlinkotlinstdlib"
+"orgjetbrainskotlinkotlinstdlibjdk7" -> "orgjetbrainskotlinkotlinstdlib"
+"orgjetbrainskotlinxkotlinxcoroutinesandroid" -> "orgjetbrainskotlinxkotlinxcoroutinescore"
+"orgjetbrainskotlinxkotlinxcoroutinesandroid" -> "orgjetbrainskotlinxkotlinxcoroutinesbom"
+"orgjetbrainskotlinxkotlinxcoroutinesandroid" -> "orgjetbrainskotlinkotlinstdlibjdk8"
+}
